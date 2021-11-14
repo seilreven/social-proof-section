@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap");
+
+:root {
+  --very-dark-magenta: hsl(300, 43%, 22%);
+  --soft-pink: hsl(333, 80%, 67%);
+  --dark-grayish-magenta: hsl(303, 10%, 53%);
+  --light-grayish-magenta: hsl(300, 24%, 96%);
+  --white: hsl(0, 0%, 100%);
+  font-size: 15px;
+  font-family: "Spartan", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(./images/bg-pattern-top-desktop.svg),
+    url(./images/bg-pattern-bottom-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: top left, bottom right;
+  background-color: var(--white);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.hero {
+  height: 80%;
+  width: 80%;
+  max-width: 1440px;
+}
+
+.top-panel {
+  display: flex;
+}
+
+.top-panel .description {
+  flex-basis: 50%;
+}
+
+.top-panel .description h1 {
+  font-size: 2.5rem;
+  color: var(--very-dark-magenta);
+  letter-spacing: -0.1rem;
+  line-height: 2.5rem;
+  word-spacing: 0.1rem;
+  padding-right: 10rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.top-panel .description p {
+  font-size: 0.8rem;
+  color: var(--dark-grayish-magenta);
+  font-weight: 500;
+  letter-spacing: -0.05rem;
+  word-spacing: 0.1rem;
+  line-height: 1.3rem;
+  padding-right: 11rem;
+}
+
+.top-panel .ratings {
+  flex-basis: 50%;
+}
+
+.top-panel .ratings div {
+  display: flex;
+  align-items: center;
+  background-color: var(--light-grayish-magenta);
+  margin-bottom: 1rem;
+  padding: 0.5rem 0.5rem 0.5rem 0.8rem;
+  border-radius: 0.5rem;
+  font-size: 0.4rem;
+  color: var(--very-dark-magenta);
+  width: 80%;
+}
+
+.top-panel .ratings .stars {
+  margin: auto -180px auto 0;
+}
+
+.top-panel .ratings .star {
+  height: 12px;
+  width: auto;
+  margin-right: 5px;
+}
+
+.top-panel .ratings div h1 {
+  margin-left: 0px;
+}
+
+.top-panel .ratings div:nth-child(2) {
+  margin-left: auto;
+  margin-right: auto;
+}
+.top-panel .ratings div:nth-child(3) {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.bottom-panel {
+  display: flex;
+  margin-top: 80px;
+  justify-content: space-between;
+}
+
+.bottom-panel .testimony {
+  background-color: var(--very-dark-magenta);
+  border-radius: 10px;
+  overflow: hidden;
+  width: 32%;
+  height: 250px;
+}
+
+.bottom-panel .testimony:nth-child(2) {
+  margin: 15px 0 0 0;
+}
+
+.bottom-panel .testimony:nth-child(3) {
+  margin: 30px 0 0 0;
+}
+
+.bottom-panel .testimony .heading {
+  display: flex;
+  margin: 30px 30px;
+}
+
+.bottom-panel .testimony .heading img {
+  height: 40px;
+  width: auto;
+  border-radius: 50%;
+  margin-right: 25px;
+}
+
+.bottom-panel .testimony .heading .name h1 {
+  color: var(--white);
+  font-size: 0.8rem;
+  margin-bottom: 5px;
+}
+
+.bottom-panel .testimony .heading .name p {
+  color: var(--soft-pink);
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.bottom-panel .testimony .comment {
+  color: var(--white);
+  font-size: 0.8rem;
+  margin: 0px 30px 40px 30px;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+
+.attribution {
+  margin-top: 30px;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width: 375px) {
+  .top-panel {
+    flex-direction: column;
+  }
+
+  .top-panel .description {
+    margin-bottom: 30px;
+  }
+
+  .top-panel .description h1 {
+    font-size: 1.5rem;
+    margin-top: 60px;
+    padding: 0 40px;
+    text-align: center;
+    line-height: 1.8rem;
+  }
+
+  .top-panel .description p {
+    padding: 0;
+    text-align: center;
+  }
+
+  .top-panel .ratings > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .top-panel .ratings .stars {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .top-panel .ratings h1 {
+    text-align: center;
+  }
+
+  .bottom-panel {
+    flex-direction: column;
+    margin-top: 30px;
+  }
+
+  .bottom-panel .testimony:nth-child(2) {
+    margin: 0 0 10px 0;
+  }
+
+  .bottom-panel .testimony:nth-child(3) {
+    margin: 0;
+  }
+
+  .bottom-panel .testimony {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
